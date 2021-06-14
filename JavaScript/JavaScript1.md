@@ -1,164 +1,218 @@
-# JavaScript  
+# JavaScript
 
 ## 目標
+
 基礎的な知識を身につける  
 信頼できる情報を探せるようになる  
-信頼できるサイトを見つけておく(これは目標ではないミニ課題)  
+信頼できるサイトを見つけておく(これは目標ではないミニ課題)
 
-JavaScriptについて、自分で調べて学習するための基礎知識を身につけられるようになろう！  
+JavaScript について、自分で調べて学習するための基礎知識を身につけられるようになろう！
 
-リファレンスをひけば良い部分は覚えない！  
+リファレンスをひけば良い部分は覚えない！
 
-※ブラウザはchromeを想定  
+※ブラウザは chrome を想定
 
-## JavaScriptとは
+## JavaScript とは
 
 基本的にはブラウザ上の処理を行う  
-Webアプリケーションにはほぼ必須  
+Web アプリケーションにはほぼ必須  
 動的、静的という表現では動的になる。  
-ブラウザでは画像スライドショーとかclickされたら変わるとか...etc  
+ブラウザでは画像スライドショーとか click されたら変わるとか...etc  
 最近では色んな所で使われている  
 サーバーサイド (Node.js)  
-npm, gulpなどの開発ツール (Node.js)  
+npm, gulp などの開発ツール (Node.js)  
 デスクトップアプリ (Electron)  
-スマホアプリ (Windows Phone, React Native, Titanium等)  
-今回は基本的にブラウザ上で動作するJSを対象にします。  
+スマホアプリ (Windows Phone, React Native, Titanium 等)  
+今回は基本的にブラウザ上で動作する JS を対象にします。
 
-
-## printデバッグ  
+## print デバッグ
 
 console.log()  
 オブジェクトの中身まで見れて便利  
-本講義では基本的にこれを使う  
+本講義では基本的にこれを使う
 
-ブラウザで右クリック検証consoleで  
+ブラウザで右クリック検証 console で
+
+```JS
+console.log('富岡義勇');
 ```
-console.log('富岡義勇');  
-```  
 
-consoleに富岡義勇が表示される  
+console に富岡義勇が表示される
 
+```JS
+console.log(2+1);
 ```
-console.log(2+1);  
-```  
 
-consoleに3が表示される  
+console に 3 が表示される
 
+## HTML に直接記述しよう
 
-## HTMLに直接記述しよう  
-つくったhtmlファイルの</body>の上に  
+つくった html ファイルの</body>の上に
+
+```HTML
+<script>console.log('壱の型');</script>
 ```
-<script>console.log('壱の型');</script>  
-```  
-consoleを見て壱の型を確認
 
-## JavaScriptファイルをHTMLに読み込ませる 
-htmlファイルと同じところにscript.jsをつくる  
+console を見て壱の型を確認
+
+## JavaScript ファイルを HTML に読み込ませる
+
+html ファイルと同じところに script.js をつくる  
 -test.html  
 -script.js  
-.jsという拡張子がJavaScriptのファイル  
+.js という拡張子が JavaScript のファイル
 
+html の中
 
-htmlの中
-```
-<script src="script.js"></script> 
+```HTML
+<script src="script.js"></script>
 <script>console.log('壱の型');</script>
-```  
-
-script.jsの中  
 ```
+
+script.js の中
+
+```JS
 console.log('凪')
-```  
+```
 
-このようにJavaScriptは外部ファイルに読み込ませるのが一般的  
+このように JavaScript は外部ファイルに読み込ませるのが一般的
 
+## アラートを出してみよう
 
-## 簡単なDOM操作  
-HTMLドキュメントの中身を操作しよう  
-ブラウザのAPIを知ろう  
+```HTML
+<html>
+<head>
+<title>TAG index Webサイト</title>
 
-DOMとは？  
-Document Object Modelの略  
-HTML文書をJSで操作するAPIを定めたもの  
-API: メソッドや定数といったインターフェイス  
+<script type="text/javascript">
 
-DOM操作大変だからReact.jsとかjQuery等ライブラリを使うとDOMを直接操作する機会は減るが、知っておく必要はある  
+function disp(){
 
-DOM APIをひとつだけ紹介!  
+	window.alert('アラートの表示');
+
+}
+
+</script>
+
+</head>
+<body>
+
+<p><input type="button" value="警告ダイアログ" onClick="disp()"></p>
+
+</body>
+</html>
+
+```
+
+## 簡単な DOM 操作
+
+HTML ドキュメントの中身を操作しよう  
+ブラウザの API を知ろう
+
+DOM とは？  
+Document Object Model の略  
+HTML 文書を JS で操作する API を定めたもの  
+API: メソッドや定数といったインターフェイス
+
+DOM 操作大変だから React.js とか jQuery 等ライブラリを使うと DOM を直接操作する機会は減るが、知っておく必要はある
+
+DOM API をひとつだけ紹介!
 
 document.getElementById('id')  
-ブラウザの画面の部分をdocumentオブジェクトという  
+ブラウザの画面の部分を document オブジェクトという
 
-htmlファイルのpタグにidを追加  
-```
+html ファイルの p タグに id を追加
+
+```HTML
 <p id="choice">Gong cha</p>
-```  
-
-
-script.jsに以下を追加  
 ```
-document.getElementById('choice').textContent = new Date();
-```  
 
+script.js に以下を追加
+
+```JS
+document.getElementById('choice').textContent = new Date();
+```
 
 ブラウザをリロード！
-Gong chaが時間に変わっている！
-これがDOM操作的な感じ  
+Gong cha が時間に変わっている！
+これが DOM 操作的な感じ
 
-## コメント  
+### 毎秒更新して時計を作ろう
+
+```JS
+function showClock1() {
+   var nowTime = new Date();
+   var nowHour = nowTime.getHours();
+   var nowMin  = nowTime.getMinutes();
+   var nowSec  = nowTime.getSeconds();
+   var msg = "現在時刻は、" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
+   document.getElementById("RealtimeClockArea").innerHTML = msg;
+}
+setInterval('showClock1()',1000);//1秒停止
+
 ```
-// 一行コメント  
-```  
+
+```HTML
+<p id="RealtimeClockArea2">※ここに時計(2桁固定版)が表示されます。</p>
 ```
+
+## コメント
+
+```JS
+// 一行コメント
+```
+
+```JS
 /*
 複数行コメント
 */
-```  
+```
 
+## 変数
 
-
-## 変数  
 const  
-再宣言、再代入が不可  
+再宣言、再代入が不可
 
 let  
-再宣言は不可、再代入は可能  
+再宣言は不可、再代入は可能
 
 var  
-再宣言・再代入が可能  
+再宣言・再代入が可能
 
-型がなくJavaやCと違う  
+型がなく Java や C と違う
 
-古い環境ではvarしか動かないとかあるげど  
-最近の環境ならlet, constを使おう  
-最近とは、Babel, TypeScriptが使えるとかES6とか  
-constの使用に固執し、letを使用してください。  
-※宣言はハマりやすいので注意  
+古い環境では var しか動かないとかあるげど  
+最近の環境なら let, const を使おう  
+最近とは、Babel, TypeScript が使えるとか ES6 とか  
+const の使用に固執し、let を使用してください。  
+※宣言はハマりやすいので注意
 
-htmlファイルに  
-```
+html ファイルに
+
+```JS
 const a = 'ぴちゃい'
 console.log(a)
-```  
+```
 
-ぴちゃいってconsoleにでるはず  
-
+ぴちゃいって console にでるはず
 
 ## if else
-CやJavaと同じ  
-```
+
+C や Java と同じ
+
+```JS
 if(){
 
 }else if(){
-  
+
 }else{
 
 }
-```  
-
-
-htmlファイルの中  
 ```
+
+html ファイルの中
+
+```JS
 const num = Math.floor(Math.random()*5)
 let mes;
 if( 4 === num){
@@ -170,31 +224,32 @@ else {
   mes = 'ざこ'
 }
 console.log(mes)
-```  
+```
 
-consoleで結果を確認  
-4なら4 3なら3 それ以外はざこ  
+console で結果を確認  
+4 なら 4 3 なら 3 それ以外はざこ
 
-switch文もある  
+switch 文もある
 
 ## for
-htmlファイルの中  
 
-```
+html ファイルの中
+
+```JS
 for(var i=1;i<=10;i++){
   console.log(i);
 }
-```  
+```
 
-consoleで結果を確認  
-1~10まででるよ  
+console で結果を確認  
+1~10 まででるよ
 
-
-while文もある  
+while 文もある
 
 ## 配列
-```
-const t = [1, -1, 3]  
+
+```JS
+const t = [1, -1, 3]
 
 t.push(5)
 
@@ -203,106 +258,105 @@ console.log(t[1])     // -1 is printed
 
 t.forEach(value => {
   console.log(value)  // numbers 1, -1, 3, 5 are printed, each to own line
-})              
-```  
-
-配列の内容がconstとして定義されている場合でも、配列の内容を変更できることです。配列はオブジェクトであるため、変数は常に同じオブジェクトを指します。ただし、新しい項目が追加されると、配列の内容は変化します。  
-
-配列の項目を反復処理する1つの方法は、例にあるようにforEachを使用することです。forEachは、矢印構文をパラメーターとして使用して定義された関数を受け取ります。  
-
+})
 ```
+
+配列の内容が const として定義されている場合でも、配列の内容を変更できることです。配列はオブジェクトであるため、変数は常に同じオブジェクトを指します。ただし、新しい項目が追加されると、配列の内容は変化します。
+
+配列の項目を反復処理する 1 つの方法は、例にあるように forEach を使用することです。forEach は、矢印構文をパラメーターとして使用して定義された関数を受け取ります。
+
+```JS
 value => {
   console.log(value)
 }
-```  
-
+```
 
 ### map
-配列に対して定義されている便利なメソッドがたくさんあります。mapメソッドを使用する短い例を見てみましょう。  
 
-```
+配列に対して定義されている便利なメソッドがたくさんあります。map メソッドを使用する短い例を見てみましょう。
+
+```JS
 const t = [1, 2, 3]
 
 const m1 = t.map(value => value * 2)
 console.log(m1)   // [2, 4, 6] is printed
-```  
+```
 
-古い配列に基づいて、mapは新しい配列を作成します。パラメーターとして指定された関数を使用して、項目が作成されます。この例の場合、元の値は2倍されます  
-
+古い配列に基づいて、map は新しい配列を作成します。パラメーターとして指定された関数を使用して、項目が作成されます。この例の場合、元の値は 2 倍されます
 
 ## 関数
-アロー関数の定義については、すでによく知っています。矢印関数を定義するための、手抜きなしの完全なプロセスは次のとおりです。  
 
-```
+アロー関数の定義については、すでによく知っています。矢印関数を定義するための、手抜きなしの完全なプロセスは次のとおりです。
+
+```JS
 // 基本形
 var add = (x, y) => {
     return x + y;
 };
-```  
-
 ```
+
+```JS
 const sum = (p1, p2) => {
   console.log(p1) // 1
   console.log(p2) // 5
   return p1 + p2
-}  
+}
 
-//関数を呼び出す  
+//関数を呼び出す
 const result = sum(1, 5)
 console.log(result)// 6
-```  
-
-
-パラメータが一つの場合()省略  
 ```
+
+パラメータが一つの場合()省略
+
+```JS
 const sum = p1 =>{
 
 }
-```  
-
-
-この形式は、配列を操作する場合に特に便利です。たとえば、mapメソッドを使用する場合などです。  
-
 ```
+
+この形式は、配列を操作する場合に特に便利です。たとえば、map メソッドを使用する場合などです。
+
+```JS
 const t = [1, 2, 3]
 const tSquared = t.map(p => p * p)
 // tSquared is now [1, 4, 9]
-```  
-
-arrow関数機能は、ほんの数年前にバージョンES6でJavaScriptに追加されました。以前は、関数を定義する唯一の方法は、キーワードfunctionを使用することでした。  
-
-### function  
-
-関数を参照する方法は2つあります。1つは関数宣言で名前を付けることです。(先ほど出たやつ)  
 ```
+
+arrow 関数機能は、ほんの数年前にバージョン ES6 で JavaScript に追加されました。以前は、関数を定義する唯一の方法は、キーワード function を使用することでした。
+
+### function
+
+関数を参照する方法は 2 つあります。1 つは関数宣言で名前を付けることです。(先ほど出たやつ)
+
+```JS
 function product(a, b) {
   return a * b
 }
 
 const result = product(2, 6)
 // result is now 12
-```  
-
-
-関数を定義するもう1つの方法は、関数式を使用することです。この場合、関数に名前を付ける必要はなく、定義はコードの残りの部分に存在します。  
 ```
+
+関数を定義するもう 1 つの方法は、関数式を使用することです。この場合、関数に名前を付ける必要はなく、定義はコードの残りの部分に存在します。
+
+```JS
 const average = function(a, b) {
   return (a + b) / 2
 }
 
 const result = average(2, 5)
 // result is now 3.5
-```  
+```
 
-矢印構文=>を使用してすべての関数を定義しよう!  
-
-
+矢印構文=>を使用してすべての関数を定義しよう!
 
 ## this
 
-ごめんvar使ってます  
-```
-//基本形  
+ごめん var 使ってます
+
+```JS
+//基本形
 var a = {
     foo : function () {
         console.log(this === a);
@@ -310,11 +364,11 @@ var a = {
 };
 a.foo();        // true  (this は a を指す)
 a.foo.call({}); // false (this は {} を指す)
-```  
-
-コンストラクタの場合  
-
 ```
+
+コンストラクタの場合
+
+```JS
 function Human( name, age ) {
 
     this.name = name;
@@ -325,24 +379,24 @@ function Human( name, age ) {
 var taro = new Human( '太郎', 30 );
 
 console.log( taro );
-```  
+```
 
+また、this を含む関数がグローバルスコープで呼ばれた場合、this はグローバルオブジェクトを参照します。次の例を見てみましょう。
 
-また、thisを含む関数がグローバルスコープで呼ばれた場合、thisはグローバルオブジェクトを参照します。次の例を見てみましょう。
-```  
+```JS
 var hello = "Hello";
- 
+
 var greet = function(){
     console.log(this.hello);
 };
- 
+
 greet();            //Hello（window.helloと同義）
 
-```  
+```
 
 ## クラス
 
-```
+```JS
 const fooclass = class {
   constructor(x, y) { /* コンストラクタ */
     this.x = x
@@ -352,45 +406,44 @@ calc() {  /* メソッド */
     return this.x + this.y  /* x と y を足した値を返却する */
   }
 }
-```  
+```
 
 ## 画像をスライドさせる
 
-```
+```HTML
 <img id="mypic" data-src="https://i.pinimg.com/236x/ec/68/78/ec68785dbfbb1f715cf506b2d1f9fdd8.jpg" width="400" height="300" class="lazyload">
   <script>
 const pics_src = ["https://i.pinimg.com/236x/ec/68/78/ec68785dbfbb1f715cf506b2d1f9fdd8.jpg",
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxKmiHnSqBC98-yVeVrtGO8OV-Pfp2DylzgA&usqp=CAU",
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSje_3K-IG-MGDBGwvGH498oqN3qoLnixKwaQ&usqp=CAU"];
 let num = -1;
- 
- 
+
+
 function slideshow_timer(){
   if (num === 2){
     num = 0;
-  } 
+  }
   else {
     num ++;
   }
   document.getElementById("mypic").src = pics_src[num];
 }
- 
+
 setInterval(slideshow_timer, 1000);
   </script>
-```  
-画像スライドを確認する  
+```
 
+画像スライドを確認する
 
-## 外部API使う
+## 外部 API 使う
 
-鉄道遅延情報のjsonを表示させる以下のやつ  
+鉄道遅延情報の json を表示させる以下のやつ  
 https://rti-giken.jp/fhc/api/train_tetsudo/
 
-
 コードの内容はわからなくてよいです  
-外部APIをためそうコピペの会
+外部 API をためそうコピペの会
 
-```
+```JS
 window.addEventListener('load', function() {
   getTrainList();
 });
@@ -414,15 +467,16 @@ function getTrainList() {
     }
   });
 }
-```  
-
 ```
+
+```HTML
  <h1>遅延路線</h1>
       <table id="train-list">
       </table>
 ```
 
-結果  
+結果
+
 ```
 遅延路線
 1	中央･総武各駅停車	JR東日本
@@ -444,11 +498,41 @@ function getTrainList() {
 17	磐越東線	JR東日本
 18	八戸線	JR東日本
 19	阿武隈急行線	阿武隈急行
-```  
+```
+
+## 外部 API 使う 2
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const callApi = async () => {
+  const id = (() => Math.floor(Math.random() * 899))();
+  //今のポケモンは898種類いるらしいです
+
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+  const poke = await response.json();
+
+  document.write(`<h1>${poke.name}</h1><img src=${poke.sprites.front_default} />`);
+};
+
+callApi();
+    </script>
+</body>
+</html>
+
+```
 
 駆け足でごめんなさい  
 お疲れ様です！  
-ありがとうございました。  
+ありがとうございました。
 
-[React Handsonへ進む(coming soon...)](a)  
-[最初に戻る](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson)  
+[React Handson へ進む(coming soon...)](a)  
+[最初に戻る](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson)
