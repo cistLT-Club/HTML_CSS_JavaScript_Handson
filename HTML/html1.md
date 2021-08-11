@@ -34,6 +34,8 @@ HTMLの形はこれだ！
 `<h3>3番目に大きな見出し</h3>`  
 ...   
 というように使います。  
+
+[演習](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_headings1)
   
 ### p  
 `<p>`タグは文章の段落を表すときに使います。  
