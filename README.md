@@ -17,21 +17,21 @@ HTMLとCSSとJavaScriptの技術をメインで勉強します。
 - 就活に生かしたい
 
 ## 環境構築編
-[VSCode_Install](https://github.com/cistb2190990/HTML_CSS_JavaScript_Handson/blob/master/VSCode.md)  
+[VSCode_Install](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson/blob/master/VSCode.md)  
 
 
 ## HTML編
- [HTML01_雛形、タグの紹介](https://github.com/cistb2190990/HTML_CSS_JavaScript_Handson/blob/master/HTML/html1.md)  
+ [HTML01_雛形、タグの紹介](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson/blob/master/HTML/html1.md)  
  []()  
 
 
 ## CSS編
-[CSS0_CSSの書き方と使い方](https://github.com/cistb2190990/HTML_CSS_JavaScript_Handson/blob/master/CSS/css1.md)  
+[CSS0_CSSの書き方と使い方](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson/blob/master/CSS/css1.md)  
 
 
 
 ## JavaScript編
-[JavaScriptの基本とAPIの利用](https://github.com/cistb2190990/HTML_CSS_JavaScript_Handson/blob/master/JavaScript/JavaScript1.md)  
+[JavaScriptの基本とAPIの利用](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson/blob/master/JavaScript/JavaScript1.md)  
 
 
 
