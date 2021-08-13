@@ -12,7 +12,7 @@ index.html
 ```
 <p style="color: yellow;">ねこ</p>
 ```  
-ねこが赤くなる
+ねこ（黄色文字）
 
 
 ```
@@ -21,8 +21,7 @@ index.html
   p{color: blue;}
 </style> 
 ```  
-ぞうが青くなる  
-など書ける  
+ぞう（青文字）
 
 ### 基本は外部ファイルで書く
 
