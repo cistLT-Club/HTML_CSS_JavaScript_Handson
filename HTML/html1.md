@@ -119,6 +119,10 @@ divとの違いとして、`<div>` はブロック要素(前後に改行がは�
 
 [練習してみよう（英語サイト）](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_tables1)
 
+## おすすめのサイト
+[CodeSandbox](https://codesandbox.io/) … HTMLの他にも、色々な言語を試せるので、ちょっとした練習とかにおすすめ。  
+[W3Schools](https://www.w3schools.com/) … HTMLやCSS、Javascriptとかの勉強にお勧めです。英語のサイトになりますが、多分この程度のレベルの英語なら読めるんじゃないかなと思います。
+
 
 [CSS Handsonへ進む](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson/blob/master/CSS/css1.md)  
 [最初に戻る](https://github.com/CIST-LT-CLUB/HTML_CSS_JavaScript_Handson/blob/master/README.md)  
