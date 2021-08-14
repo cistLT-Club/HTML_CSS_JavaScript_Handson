@@ -240,7 +240,7 @@ p {
 ## px % em
 px
 コンピュータディスプレイの解像度の点の大きさ  
-20oxは20個分のドット  
+20pxは20個分のドット  
 この単位は環境によって変化しない絶対単位
 
 %
@@ -447,11 +447,11 @@ foot、足の部分、つまり下
 index.html  
 ```
 <footer class="footer">
-  <p>&copy:2020 Copyright CISTLT. ALL rights reserved</p>
+  <p>&copy;2020 Copyright CISTLT. ALL rights reserved</p>
 </footer>
 ```  
 
-&copyで©マークになる  
+&copy;で©マークになる  
 
 style.css  
 ```
